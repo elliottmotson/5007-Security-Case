@@ -1,0 +1,22 @@
+<HTML>
+    <HEAD>
+        <TITLE>Log In</TITLE>
+    </HEAD>
+    <BODY>
+        {% include 'nav.html' %}
+        <div class="row center-xs">
+            <div class="col-xs-6">
+                <div class="box">
+                    <H1>Log In</H1>
+                    <FORM action="/login" method="post">
+                        <LABEL for="username">Username:</LABEL>
+                        <INPUT type="text" id="username" name="username"><BR>
+                        <LABEL for="password">Password:</LABEL>
+                        <INPUT type="password" id="password" name="password"><BR>
+                        <INPUT type="submit" value="Log In">
+                    </FORM>
+                </div>
+            </div>
+        </div>
+    </BODY>
+</HTML>

@@ -31,20 +31,20 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/login", methods=["GET", "POST"])
+@app.route("/login/", methods=["GET", "POST"],strict_slashes=False)
 def login():
     if request.method == "POST":
         session["username"] = request.form["username"]
         session["password"] = request.form["password"]
-        if session["username"] == "admin" and session["password"] == "admin":
+        if session["username"] == "admin-udlozzfjsv" and session["password"] == "monkish-flinders-cavers-sandarach-punctured":
             return redirect(url_for("index"))
         else:
             flash("Invalid credentials")
             session.pop("username", None)
-            return redirect(url_for("login"))
+            return redirect(url_for("login")), 301
     return render_template("login.html")
     
-@app.route("/logout")
+@app.route("/logout/")
 def logout():
     session.pop("username", None)
     return redirect(url_for("index"))

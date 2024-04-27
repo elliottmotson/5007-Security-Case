@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Index</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        {% include 'nav.html' %}
+        <h1>Purrfect Platform</h1>
+        <img src="/static/img/sushi.png" alt="">
+        <p>We're feline good about our cybersecurity!</p>
+
+        {% if session['username'] %}
+            <p>Welcome, {{ session['username'] }}!</p>
+        {% else %}
+            <p>Log in to access the purrfect platform!</p>
+        {% endif %}
+    </body>
+</html>
