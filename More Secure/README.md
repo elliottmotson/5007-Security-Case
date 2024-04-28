@@ -1,8 +1,16 @@
 ## Setup
 
+# Linux
+
 python3 -m venv venv
 . venv/bin/activate
 pip install -r requirements.txt
+
+# Windows
+
+python.exe -m venv venv
+./venv/Scripts/activate
+pip install -r .\requirements.txt
 
 ## Run
 
