@@ -36,7 +36,7 @@ def login():
     if request.method == "POST":
         session["username"] = request.form["username"]
         session["password"] = request.form["password"]
-        if session["username"] == "admin" and session["password"] == "admin":
+        if session["username"] == "admin" and session["password"] == "password":
             return redirect(url_for("index"))
         else:
             flash("Invalid credentials")
